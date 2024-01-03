@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #516d9c;
+    position: relative;
+    overflow: hidden;
+}
+
+.submit {
+    padding: 10px 45px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    background-color: white;
+    cursor: pointer;
+    position: absolute;
+}
+
+.submit:active {
+    transform: scale(0.98);
+}
+
+.popup {
+    background-color: white;
+    width: 300px;
+    height: 250px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    display: none;
+}
+
+.popup.active {
+    animation: showPopup 0.8s ease-in forwards;
+}
+
+@keyframes showPopup {
+    from {
+        top: -250px;
+        transform: scale(0.1);
+        opacity: 0;
+    }
+
+    to {
+        top: 0px;
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+.popup img {
+    width: 55px;
+    height: 55px;
+    position: absolute;
+    top: -30px;
+    left: 41%;
+}
+
+.popup h1 {
+    font-size: 20px;
+    margin: 20px auto 30px;
+}
+
+.popup p {
+    font-size: 15px;
+    text-align: center;
+}
+
+.popup button {
+    border: none;
+    border-radius: 15px;
+    outline: none;
+    background-color: #5CAB05;
+    color: white;
+    width: 60%;
+    padding: 7px;
+    font-size: 16px;
+    position: absolute;
+    bottom: 25px;
+    cursor: pointer;
+}
+
+.popup button:active {
+    transform: scale(0.98);
+}
